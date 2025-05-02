@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Promptopia",
     images: [
       {
-        url: "/assets/images/og-image.png", // ✅ Replace with a real OG image
+        url: "/assets/images/logo.svg", // ✅ Replace with a real OG image
         width: 1200,
         height: 630,
         alt: "Promptopia Banner",
