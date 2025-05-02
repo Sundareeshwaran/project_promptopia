@@ -3,15 +3,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
 
+
 export const metadata = {
+  metadataBase: new URL("https://project-promptopia-4arq.vercel.app"),
   title: "Promptopia",
   description: "Discover & Share AI Prompts",
-  themeColor: "#f97316", // Tailwind's orange-500 (optional)
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   icons: {
     icon: "/assets/images/logo.svg",
     shortcut: "/assets/images/logo.svg",
@@ -20,11 +16,11 @@ export const metadata = {
   openGraph: {
     title: "Promptopia",
     description: "Discover & Share AI Prompts",
-    url: "https://project-promptopia-4arq.vercel.app/", // 🔁 Replace with your actual site URL
+    url: "https://project-promptopia-4arq.vercel.app",
     siteName: "Promptopia",
     images: [
       {
-        url: "/assets/images/logo.svg", // ✅ Replace with a real OG image
+        url: "/assets/images/logo.svg",
         width: 1200,
         height: 630,
         alt: "Promptopia Banner",
@@ -36,11 +32,19 @@ export const metadata = {
     card: "summary_large_image",
     title: "Promptopia",
     description: "Discover & Share AI Prompts",
-    // site: "@",  // 🔁 Optional: Your Twitter handle
-    // creator: "@", // 🔁 Optional: Your personal Twitter handle
-    images: ["/assets/images/og-image.png"], // ✅ Should match openGraph image
+    images: ["/assets/images/logo.svg"],
   },
 };
+
+// ✅ Export viewport separately
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+// ✅ Export themeColor separately
+export const themeColor = "#f97316";
 
 
 const RootLayout = ({children}) => {
